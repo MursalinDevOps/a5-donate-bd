@@ -29,9 +29,78 @@
       * {
         font-family: "Lexend", sans-serif;
       }
+      code{
+        background-color: rgba(190, 63, 63, 0.4);
+      }
     </style>
 </head>
 <body>
-    <h4>Helloooo</h4>
+    <header>
+      <nav
+      class="lg:text-xl flex justify-between items-center p-6 bg-[#F9F7F3]"
+    >
+      <div>
+        <a href="./index.html"
+          ><button class="btn bg-[#B4F461]">Go Back</button></a
+        >
+      </div>
+      <div class="flex items-center gap-2"> <span><img src="./assets/logo.png" alt=""></span> Donate Bangladesh</div>
+      <div class="flex gap-2">
+        <span><img src="./assets/coin.png" alt="" /></span>
+        <span id="available-balance">10000</span>
+        <span>BDT</span>
+      </div>
+    </nav>
+    </header>
+
+    <main>
+      <!-- FAQ SECTION -->
+      <section class="container mx-auto space-y-5 mt-12">
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+          <div class="collapse-content">
+            <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document as a tree of objects.This allows programming languages, especially JavaScript, to manipulate the content, structure, and style of web pages dynamically.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">How do select a element from the DOM?</div>
+          <div class="collapse-content">
+            <p>There are multiple ways to select an document from the DOM. The most common methods that i know are shown below : <br>
+              <p>Get element by Query Selector :</p>
+            <code>const element = document.getElementById('id_name');</code>
+
+              <p>Get elements by Tag name :</p>
+            <code>const elements = document.getElementsByTagName('tag_name');</code>
+
+            <p>Get elements by Class name :</p>
+            <code>const elements = document.getElementsByClassName('class_name');</code>
+
+            <p>Get elements by Query Selector All :</p>
+            <code>const elements = document.getElementsByQuerySelectorAll('.class_name');</code>
+
+            <p>Get element by Query Selector :</p>
+            <code>const element = document.getElementsByQuerySelector('#id_name');</code>
+            
+          </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+          <div class="collapse-content">
+            <p>Event delegation is a technique in the DOM where a single event listener is attached to a parent element instead of individual child elements. This listener captures events that bubble up from child elements.Event Delegation is Useful for Reducing memory usage and improving performance, Automatically working for dynamically added child elements, as they inherit the event from the parent and Simplifies event handling by centralizing logic in one place.</p>
+          </div>
+          
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+          <div class="collapse-content">
+            <p>I manipulate an element's attributes by using <code>setAttribute</code> and <code>removeAttribute</code> property of JavaScript.</p>
+          </div>
+      </section>
+    </main>
 </body>
 </html>
