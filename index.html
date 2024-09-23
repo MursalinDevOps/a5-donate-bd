@@ -51,14 +51,14 @@
       <!-- Toggle Active Buttons -->
       <section class="flex justify-center">
         <div class="py-4">
-          <button class="btn bg-[#B4F461]">Donation</button>
-          <button class="btn">History</button>
+          <button id="btn-donation" class="btn bg-[#B4F461]">Donation</button>
+          <button id="btn-history" class="btn">History</button>
         </div>
       </section>
     </header>
     <main>
       <!-- Cards -->
-      <section class="container mx-auto">
+      <section id="card-section" class="container mx-auto">
         <!-- Card 1 -->
         <div
           class="lg:w-9/12 p-4 my-8 lg:flex justify-around items-center mx-auto gap-5 border border-2 rounded-xl"
@@ -136,7 +136,7 @@
               placeholder="Write Donate Amount"
               class="input input-bordered w-full mt-6"
             />
-            <button class="btn btn-block bg-[#B4F461] mt-6">Donate Now</button>
+            <button id="donate-btn2" class="btn btn-block bg-[#B4F461] mt-6">Donate Now</button>
           </div>
         </div>
         <!-- Card 3 -->
@@ -177,15 +177,12 @@
               placeholder="Write Donate Amount"
               class="input input-bordered w-full mt-6"
             />
-            <button class="btn btn-block bg-[#B4F461] mt-6">Donate Now</button>
+            <button id="donate-btn3" class="btn btn-block bg-[#B4F461] mt-6">Donate Now</button>
           </div>
         </div>
       </section>
       <!-- HISTORY SECTION -->
-       <section class="" id="history-section">
-        <div id="history-contents" class="border border-2 lg:w-[1152px] lg:h-[136px] p-4 my-8 rounded-xl mx-auto">
-         
-        </div>
+       <section class="hidden" id="history-section">
         
        </section>
     </main>
