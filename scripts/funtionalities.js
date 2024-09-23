@@ -13,14 +13,16 @@ document.getElementById("donate-btn1").addEventListener("click", function (e) {
     }
     if (isNaN(donateAmount) || donateAmount < 0) {
         alert("Invalid donate amount. Try again.");
-    } else {
-        // Update the Donation Amount
-        document.getElementById("noakhali-donation").innerText =
-            initialDonation + donateAmount;
-        //   Update the Available Amount
-        document.getElementById("available-balance").innerText =
-            availableBalance - donateAmount;
+        return;
     }
+    // Update the Donation Amount
+    document.getElementById("noakhali-donation").innerText =
+        initialDonation + donateAmount;
+    //   Update the Available Amount
+    document.getElementById("available-balance").innerText =
+        availableBalance - donateAmount;
+    //   Show Modal on successful submission
+    my_modal_1.showModal();
 });
 //   Feni
 
@@ -36,50 +38,59 @@ document.getElementById("donate-btn2").addEventListener("click", function (e) {
         alert("Insufficient Balance, Add money and try again.");
         return;
     }
+    // Validation: Invalid amount
     if (isNaN(donateAmount) || donateAmount < 0) {
         alert("Invalid donate amount. Try again.");
-    } else {
-        // Update the Donation Amount
-        document.getElementById("feni-donation").innerText =
-            initialDonation + donateAmount;
-        //   Update the Available Amount
-        document.getElementById("available-balance").innerText =
-            availableBalance - donateAmount;
+        return;
     }
+    // Update the Donation Amount
+    document.getElementById("feni-donation").innerText =
+        initialDonation + donateAmount;
+    //   Update the Available Amount
+    document.getElementById("available-balance").innerText =
+        availableBalance - donateAmount;
+    //   Show Modal on successful submission
+    my_modal_1.showModal();
 });
 // Quota Movement
-document.getElementById('donate-btn3').addEventListener('click', function (e) {
+document.getElementById("donate-btn3").addEventListener("click", function (e) {
     e.preventDefault();
-    const donateAmount = getInputValue('donate-field3');
-    const initialDonation = getInnerTextById('quota-donation');
+    const donateAmount = getInputValue("donate-field3");
+    const initialDonation = getInnerTextById("quota-donation");
     const availableBalance = parseInt(
         document.getElementById("available-balance").innerText
-    ); 
+    );
     updateHistory(donateAmount, "Aid for Injured in the Quota Movement");
 
+    // Validation: Insufficient balance
     if (donateAmount > availableBalance) {
         alert("Insufficient Balance, Add money and try again.");
         return;
     }
+
+    // Validation: Invalid amount
     if (isNaN(donateAmount) || donateAmount < 0) {
         alert("Invalid donate amount. Try again.");
-    } else {
-        // Update the Donation Amount
-        document.getElementById("quota-donation").innerText =
-            initialDonation + donateAmount;
-        //   Update the Available Amount
-        document.getElementById("available-balance").innerText =
-            availableBalance - donateAmount;
+        return;
     }
 
+    // Successful donation - Update values and show modal
+    document.getElementById("quota-donation").innerText =
+        initialDonation + donateAmount;
+
+    document.getElementById("available-balance").innerText =
+        availableBalance - donateAmount;
+
+    //   Show Modal on successful submission
+    my_modal_1.showModal();
 });
 
 //   Toggle
-document.getElementById("btn-history").addEventListener("click", function() {
+document.getElementById("btn-history").addEventListener("click", function () {
     btnToggle("history-section"); // Show the history section
 });
 
-document.getElementById("btn-donation").addEventListener("click", function() {
+document.getElementById("btn-donation").addEventListener("click", function () {
     btnToggle("card-section"); // Show the donation section
 });
 
@@ -92,24 +103,22 @@ function updateHistory(donateAmount, place) {
             <h3>Time: ${currentDateTime}</h3>
         </div>
     `;
-};
-
+}
 
 // Active/Inactive status
 
-const btn1 = document.getElementById('btn-donation');
-const btn2 = document.getElementById('btn-history');
-
+const btn1 = document.getElementById("btn-donation");
+const btn2 = document.getElementById("btn-history");
 
 // Event listeners for the buttons
-btn1.addEventListener("click", function() {
+btn1.addEventListener("click", function () {
     activateButton(btn1);
-    btn2.classList.remove('bg-[#B4F461]')
-    btn1.classList.add('bg-[#B4F461]');
+    btn2.classList.remove("bg-[#B4F461]");
+    btn1.classList.add("bg-[#B4F461]");
 });
 
-btn2.addEventListener("click", function() {
+btn2.addEventListener("click", function () {
     activateButton(btn2);
-    btn1.classList.remove('bg-[#B4F461]')
-    btn2.classList.add('bg-[#B4F461]');
+    btn1.classList.remove("bg-[#B4F461]");
+    btn2.classList.add("bg-[#B4F461]");
 });
