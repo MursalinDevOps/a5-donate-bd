@@ -97,6 +97,19 @@ function updateHistory(donateAmount, place) {
 
 // Active/Inactive status
 
-document.getElementById('btn-donation').addEventListener('click', function(){
-    
-})
+const btn1 = document.getElementById('btn-donation');
+const btn2 = document.getElementById('btn-history');
+
+
+// Event listeners for the buttons
+btn1.addEventListener("click", function() {
+    activateButton(btn1);
+    btn2.classList.remove('bg-[#B4F461]')
+    btn1.classList.add('bg-[#B4F461]');
+});
+
+btn2.addEventListener("click", function() {
+    activateButton(btn2);
+    btn1.classList.remove('bg-[#B4F461]')
+    btn2.classList.add('bg-[#B4F461]');
+});

@@ -20,3 +20,12 @@ function getCurrentDateTime() {
     const now = new Date();
     return now.toString(); // This will return the full date format
 }
+
+// Function to handle button clicks
+function activateButton(button) {
+    btn1.classList.remove("active");
+    btn1.classList.remove("active");
+
+    // Add 'active' class
+    button.classList.add("active");
+}
