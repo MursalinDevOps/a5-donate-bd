@@ -99,7 +99,7 @@ function updateHistory(donateAmount, place) {
     const currentDateTime = getCurrentDateTime();
     document.getElementById("history-section").innerHTML += `
         <div id="history-contents" class="border border-2 flex flex-col justify-center lg:w-[1152px] lg:h-[136px] p-4 my-8 rounded-xl mx-auto">
-            <h3 class="px-4">${donateAmount} Taka is donated for ${place}</h3>
+            <h3 class="px-4">${donateAmount} Taka is donated to ${place}</h3>
             <h3 class="px-4 bg-gray-100 rounded-xl">Date: ${currentDateTime}</h3>
         </div>
     `;
